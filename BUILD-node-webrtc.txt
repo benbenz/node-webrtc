@@ -1,0 +1,16 @@
+* BUILD *
+
+# dev basics
+
+install ninja
+install CMake
+install XCode 9 or 10
+
+# if Xcode 10.0 (and not Xcode 10.2+ or maybe not Xcode 9?)
+
+edit build/external/libwebrtc/download/src/build/toolchain/mac/BUILD.gn
+change "-static -D" for "-static"
+
+# build
+
+SKIP_DOWNLOAD=true npm install
